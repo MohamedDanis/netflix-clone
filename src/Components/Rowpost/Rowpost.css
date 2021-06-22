@@ -13,6 +13,7 @@
 .posters::-webkit-scrollbar{
     display: none;
 }
+
 .poster-wrapper{
     height: 250px;
     width: 177px;

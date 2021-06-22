@@ -1,14 +1,15 @@
-import React,{useState,useContext} from 'react'
+import React,{useState,useContext,useEffect} from 'react'
 import {useHistory} from 'react-router-dom'
 import {FirebaseContext} from '../../store/FirebaseContext'
+
 import './SignIn.css'
 
 function SignIn() {
+    
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('')
     const{firebase}=useContext(FirebaseContext)
     const history = useHistory()
-
     const handleSubmit = (e)=>{
         e.preventDefault();
         firebase.auth().signInWithEmailAndPassword(email,password).then(()=>{
@@ -19,6 +20,7 @@ function SignIn() {
 
     }
     return (
+      
         <div className="bg-signin">
         <div className="parent">
             <div className="form">
@@ -54,6 +56,7 @@ function SignIn() {
             </div>
         </div>
         </div>
+      
     )
 }
 
