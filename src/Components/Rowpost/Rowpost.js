@@ -37,13 +37,14 @@ const opts = {
             <h2>{props.title}</h2>
             
             <div className="posters">
-            {movies.map((obj)=>{
+            {movies && movies.map((obj)=>{
                 return(
-                            <img onClick={()=>handleMovie(obj.id)}  className={props.isSmall?'smallPoster':"poster"} src={`${imageUrl+obj.backdrop_path}`} alt="p" />
-                       
-                    
+
+                                <img onClick={()=>handleMovie(obj.id)}  className={props.isSmall?'smallPoster':"poster"} src={`${imageUrl+obj.backdrop_path}`} alt="p" />
+                
                 )
             })}
+            
             
             </div>
            {urlId &&  <Youtube videoId={urlId.key} opts={opts}/>}

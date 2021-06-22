@@ -3,6 +3,7 @@ import {useHistory} from 'react-router-dom'
 import './IntroNavbar.css'
 
 function IntroNavbar() {
+    console.log(process.env.FIREBASE_API_KEY);
     const histroy = useHistory()
     return (
         <div className="navbar-intro">

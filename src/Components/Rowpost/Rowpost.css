@@ -13,6 +13,12 @@
 .posters::-webkit-scrollbar{
     display: none;
 }
+.poster-wrapper{
+    height: 250px;
+    width: 177px;
+    background-color: aliceblue;
+    margin: 2px;
+}
 .poster{
     max-height: 250px;
     margin-right: 10px;
